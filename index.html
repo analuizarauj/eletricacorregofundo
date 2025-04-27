@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elétrica Córrego Fundo</title>
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="photos.css">
+  
+  <style>
+    /* Cor de fundo do corpo da página igual ao cabeçalho */
+    body {
+      background-color: transparent; /* Usando a mesma cor do cabeçalho */
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: white; /* Garantindo que o texto fique legível */
+    }
+
+    /* Cabeçalho */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 30px;
+      background-color: transparent; /* Cor azul do cabeçalho */
+      width: 100%;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      transition: padding 0.3s, background-color 0.3s, height 0.3s;
+    }
+
+    header.shrink {
+      padding: 10px 30px;
+      height: 50px;
+      background-color: transparent; /* Cor do fundo quando o cabeçalho encolhe */
+    }
+
+    header.shrink .logo-container img {
+      max-width: 120px;
+    }
+
+    header.shrink nav .btn {
+      font-size: 14px;
+      padding: 8px 15px;
+    }
+
+    .logo-container img {
+      max-width: 150px;
+      height: auto;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .logo-container:hover img {
+      transform: scale(1.1);
+    }
+
+    nav {
+      display: flex;
+      gap: 15px;
+    }
+
+    .btn {
+      font-size: 16px;
+      color: white;
+      background: #3498db;
+      padding: 10px 20px;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 600;
+      border-radius: 5px;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .btn:hover {
+      background: #2980b9;
+    }
+
+    /* Melhorias adicionais */
+    .section-categorias {
+      padding: 50px 20px;
+      background-color: transparent;
+      margin-bottom: 60px;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    .section-header h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #2980b9;
+      position: relative;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+
+    .section-header h2::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background-color: #3498db;
+      margin: 15px auto 0;
+      border-radius: 2px;
+    }
+
+    .foto-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .foto {
+      flex: 1 1 200px;
+      max-width: 250px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .foto img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .foto img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .foto img {
+        height: 180px;
+      }
+      
+      .section-categorias {
+        margin-bottom: 40px;
+      }
+      
+      .carousel-container {
+        margin-top: 30px;
+      }
+      
+      .section-header h2 {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .foto img {
+        height: 150px;
+      }
+      
+      .section-categorias {
+        margin-bottom: 30px;
+      }
+      
+      .carousel-container {
+        margin-top: 20px;
+      }
+      
+      .section-header h2 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <a href="index.html" class="logo-container">
+      <img src="logoEletrica.png" alt="Logo da empresa">
+    </a>
+    <nav>
+      <a href="index.html" class="btn btn-1">Home</a>
+      <a href="sobre.html" class="btn btn-2">Sobre</a>
+      <a href="contato.html" class="btn btn-3">Contato</a>
+    </nav>
+  </header>
+
+  <!-- Seção Nossas Categorias -->
+  <section class="section section-categorias">
+    <div class="container">
+      <div class="section-header">
+        <h2>NOSSAS CATEGORIAS</h2>
+      </div>
+
+      <div class="foto-container">
+        <div class="foto">
+          <img src="ferramenta2.png" alt="Ferramentas">
+        </div>
+        <div class="foto">
+          <img src="materiais de contrução.webp" alt="Materiais de Construção">
+        </div>
+        <div class="foto">
+          <img src="refletores.jpg" alt="Refletores">
+        </div>
+        <div class="foto">
+          <img src="fios sil.jpg" alt="Fios">
+        </div>
+        <div class="foto">
+          <img src="materiais eletricos.png" alt="Materiais Elétricos">
+        </div>
+        <div class="foto">
+          <img src="torneira.png" alt="Torneiras">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Carrossel -->
+  <div class="carousel-container">
+    <div class="carousel">
+      <div class="slide"><img src="1.png" alt="Slide 1"></div>
+      <div class="slide"><img src="2.png" alt="Slide 2"></div>
+      <div class="slide"><img src="3.png" alt="Slide 3"></div>
+      <div class="slide"><img src="4.png" alt="Slide 4"></div>
+      <div class="slide"><img src="5.png" alt="Slide 5"></div>
+      <div class="slide"><img src="6.png" alt="Slide 6"></div>
+    </div>
+
+    <div class="nav-buttons">
+      <input type="radio" name="carousel" id="radio1" checked>
+      <label for="radio1" onclick="moveSlide(0)"></label>
+
+      <input type="radio" name="carousel" id="radio2">
+      <label for="radio2" onclick="moveSlide(1)"></label>
+
+      <input type="radio" name="carousel" id="radio3">
+      <label for="radio3" onclick="moveSlide(2)"></label>
+
+      <input type="radio" name="carousel" id="radio4">
+      <label for="radio4" onclick="moveSlide(3)"></label>
+
+      <input type="radio" name="carousel" id="radio5">
+      <label for="radio5" onclick="moveSlide(4)"></label>
+
+      <input type="radio" name="carousel" id="radio6">
+      <label for="radio6" onclick="moveSlide(5)"></label>
+    </div>
+  </div>
+
+  <script>
+    // Função para encolher o cabeçalho, logo e botões ao rolar a página
+    window.addEventListener('scroll', function() {
+      const header = document.querySelector('header');
+      const logo = document.querySelector('.logo-container img');
+      const buttons = document.querySelectorAll('.btn');
+      
+      if (window.scrollY > 50) {
+        header.classList.add('shrink');
+        logo.style.maxWidth = '120px'; 
+        buttons.forEach(button => {
+          button.style.fontSize = '14px'; 
+          button.style.padding = '8px 15px'; 
+        });
+      } else {
+        header.classList.remove('shrink');
+        logo.style.maxWidth = '150px'; 
+        buttons.forEach(button => {
+          button.style.fontSize = '16px'; 
+          button.style.padding = '10px 20px'; 
+        });
+      }
+    });
+
+    function moveSlide(index) {
+      let totalSlides = document.querySelectorAll('.slide').length;
+      let percentage = 100 / totalSlides; 
+      document.querySelector('.carousel').style.transform = `translateX(-${index * percentage}%)`;
+    }
+  </script>
+
+</body>
+</html>

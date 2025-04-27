@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elétrica Córrego Fundo</title>
+
+    <!-- Estilos incorporados diretamente no HTML -->
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Corpo da página */
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* Estilizando o cabeçalho */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 30px;
+            background: #ffffff;
+            width: 100%;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        /* Logo */
+        .logo-container img {
+            max-width: 200px;
+            height: auto;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo-container:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Estilo de navegação e botões */
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            font-size: 16px;
+            color: white;
+            background: #3498db;
+            padding: 10px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            border-radius: 5px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .btn:hover {
+            background: #2980b9;
+        }
+
+        /* Estilizando a seção das fotos */
+        .foto-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px; /* Espaço entre as imagens */
+            margin-top: 100px; /* Ajuste para não sobrepor o cabeçalho fixo */
+            padding: 0 20px;
+        }
+
+        .foto {
+            width: calc(16.66% - 20px); /* Divide a largura igualmente entre as 6 imagens */
+            display: flex;
+            justify-content: center;
+        }
+
+        .foto img {
+            width: 100%;  /* Tamanho ajustado para a largura da div */
+            height: 200px;  /* Tamanho das imagens */
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        /* Efeito ao passar o mouse nas fotos */
+        .foto img:hover {
+            transform: scale(1.1); /* Aumenta a imagem quando o mouse passa sobre ela */
+        }
+
+        /* Responsividade para telas pequenas */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            nav {
+                margin-top: 10px;
+                flex-direction: column;
+                width: 100%;
+                align-items: center;
+            }
+
+            .btn {
+                width: 80%;
+                text-align: center;
+            }
+
+            .foto {
+                width: calc(33.33% - 20px); /* Em telas menores, as imagens ocupam 1/3 da largura */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .foto {
+                width: calc(50% - 20px); /* Em telas muito pequenas, as imagens ocupam 1/2 da largura */
+            }
+        }
+      
+    </style>
+    
+
+</head>
+<body>
+
+    <header>
+        <a href="index.html" class="logo-container">
+            <img src="logoEletrica.png" alt="Logo da empresa">
+        </a>
+        <nav>
+            <a href="index.html" class="btn btn-1">Home</a>
+            <a href="sobre.html" class="btn btn-2">Sobre</a>
+            <a href="contato.html" class="btn btn-3">Contato</a>
+        </nav>
+    </header>
+
+    <!-- Seção para as seis fotos -->
+    <section class="foto-container">
+        <div class="foto">
+            <img src="foto1.jpg" alt="Foto 1">
+        </div>
+        <div class="foto">
+            <img src="foto2.jpg" alt="Foto 2">
+        </div>
+        <div class="foto">
+            <img src="foto3.jpg" alt="Foto 3">
+        </div>
+        <div class="foto">
+            <img src="foto4.jpg" alt="Foto 4">
+        </div>
+        <div class="foto">
+            <img src="foto5.jpg" alt="Foto 5">
+        </div>
+        <div class="foto">
+            <img src="foto6.jpg" alt="Foto 6">
+        </div>
+    </section>
+
+</body>
+</html>
